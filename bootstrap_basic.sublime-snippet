@@ -1,0 +1,18 @@
+<snippet>
+    <content><![CDATA[  
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            
+          </div>
+        </div>        
+      </div>]]>
+   </content>
+    <tabTrigger>boot</tabTrigger>
+    <scope>text.html</scope>
+    <description>
+      basic layout for bootstap main classes: container>>row>>col
+      notice its not for fluid-container and you need to complete col-sizes-number by yourself!    
+      written by Einar Barzilay
+    </description>
+</snippet>

@@ -1,0 +1,27 @@
+<!-- SNIPPET FOR bootstrapbasic SUBLIME 
+
+1. in sublime nav bar: tools > new snippet
+2. select all content and paste the following: 
+ -->
+<snippet>
+    <content><![CDATA[  
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            
+          </div>
+        </div>        
+      </div>]]>
+   </content>
+    <tabTrigger>boot</tabTrigger>
+    <scope>text.html</scope>
+    <description>
+      basic layout for bootstap main classes: container>>row>>col
+      notice its not for fluid-container and you need to complete col-sizes-number by yourself!    
+    </description>
+</snippet>
+
+<!-- 3. Save as: bootstrap_basic.sublime-snippet
+4. RESTART
+
+5. now you can print boot+tab and it'll autocomplete console.log(); -->
