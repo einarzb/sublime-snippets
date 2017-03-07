@@ -1,0 +1,56 @@
+SNIPPET FOR local - storage SUBLIME 
+
+1. in sublime nav bar: tools > new snippet
+2. select all content and paste the following: 
+
+<snippet>
+    <content><![CDATA[  
+     var STORAGE_ID = 'NAME'; // replace 'NAME' with your project name 
+     
+     var saveToLocalStorage = function () {
+         localStorage.setItem(STORAGE_ID, JSON.stringify('storageArrayName')); 
+         /* replace storageArrayName with your own */
+        }
+    
+     var getFromLocalStorage = function () {
+          return JSON.parse(localStorage.getItem(STORAGE_ID) || '[]');
+        }     
+
+     /* Now, storageArrayName invokes the getFromLocalStorage(); 
+        instead of being plain old empty array */
+        var storageArrayName = getFromLocalStorage();
+
+     /*
+     next steps:
+     - Invoke saveToLocalStorage(); whenever you save, remove or push element to array.
+     - Don't invoke saveToLocalStorage(); on render function!! that's view part.
+     - In dev console - type localStorage.clear(); will clear your storage.
+     @author: Einar Barzilay 2017
+     */
+     ]]>
+   </content>
+    <tabTrigger>local</tabTrigger>
+    <scope>source.js</scope>
+    <description>
+ var STORAGE_ID = 'spacebook';
+  //our key for local storage object
+
+  var saveToLocalStorage = function () {
+    localStorage.setItem(STORAGE_ID, JSON.stringify(posts));
+  }
+
+  var getFromLocalStorage = function () {
+  return JSON.parse(localStorage.getItem(STORAGE_ID) || '[]');
+}
+  
+   // instead of empty array we assign it to the localstorage
+  var posts = getFromLocalStorage(); 
+  when we want to  clear the local storage: in dev-console localStorage.clear();
+
+    </description>
+</snippet>
+
+3. Save as: local_storage.sublime-snippet
+4. RESTART
+5. now you can print local+tab and it'll autocomplete local-storage basic skelaton;
+
