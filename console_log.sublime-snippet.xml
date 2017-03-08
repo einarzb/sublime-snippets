@@ -1,0 +1,19 @@
+SNIPPET FOR CONSOLE.LOG SUBLIME 
+
+1. in sublime nav bar: tools > new snippet
+2. select all content and paste the following: 
+
+<snippet>
+    <content><![CDATA[
+      console.log($1);$0
+      ]]>
+    </content>
+    <tabTrigger>conl</tabTrigger>
+    <scope>text.html,source.js</scope>
+    <description>console.log()</description>
+</snippet>
+
+3. Save as: console_log.sublime-snippet
+4. RESTART
+
+5. now you can print conl+tab and it'll autocomplete console.log();
